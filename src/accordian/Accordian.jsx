@@ -6,8 +6,8 @@ const Accordian = () => {
   return (
       <>
           <div className="container">
-              <div className="rounded-4 shadow mx-auto p-3 col-lg-5">
-                  <p className='fs-1 text-center my-3'>
+              <div className="rounded-4 border border-dark border-3 shadow mx-auto p-3 col-lg-6">
+                  <p className='acctext fs-1 text-center my-3'>
                     Accordian
                   </p>
                   <div>

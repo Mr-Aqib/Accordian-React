@@ -1,20 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CiCirclePlus } from "react-icons/ci";
-
-const FAQS = ( {question,answer}) => {
+import { CiCircleMinus } from "react-icons/ci";
+const FAQS = ({ question, answer }) => {
+    const [openn,setOpenn]=useState(false)
   return (
       <>
-          <div className="container shadow p-3 rounded-4 my-2">
+          <div className="container border border-1 border-white shadow p-3 rounded-4 my-2">
               <div className="d-flex flex-row align-items-center justify-content-between">
-                  <h3 className='text-danger'>{question }</h3>
+                  <h5 className='text-danger'>{question }</h5>
                   <div>
-                      <CiCirclePlus  size={25} className='text-danger'/>
+                      {openn ? (<CiCircleMinus CiCirclePlus onClick={() => setOpenn(false)} cursor="pointer" size={25} className='text-white' />)
+                          : (<CiCirclePlus onClick={() => setOpenn(true)} cursor="pointer" size={25} className='text-danger' />)
+                      }
+                     
                   </div>
                   
 
               </div>
               
-              <p style={{ height: 0 , overflow:'hidden'}}>{answer }</p>
+              <p className='faqp m-0 p-0' style={{
+                  height: `${openn ? '100%' : '0'}`
+                  , overflow: 'hidden',
+                  
+              }}>{answer}</p>
           </div>
       </>
   )
