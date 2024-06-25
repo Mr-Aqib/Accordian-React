@@ -19,7 +19,7 @@ const FAQS = ({ question, answer }) => {
               </div>
               
               <p className='faqp m-0 p-0' style={{
-                  height: `${openn ? '100%' : '0'}`
+                  height: `${openn ? '60px' : '0'}`
                   , overflow: 'hidden',
                   
               }}>{answer}</p>

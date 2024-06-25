@@ -6,4 +6,5 @@ body {
 }
 .faqp {
   color: aliceblue;
+  transition: all.5s ease-in-out;
 }
